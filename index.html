@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Календарь</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="row row_nav justify-content-between" >
+    <div class="col-5">
+      <button class="btn btn-outline-success btn1 " type="submit" onclick="getAllEvents()">Добавить</button>
+    </div>
+    <div class="col box-form">
+      <form class="form-inline ">
+        <img src="https://img.icons8.com/ios-glyphs/80/666666/search.png" class="search_icon"height="35">
+       <input class="form-control mr-sm-2 " type="search" placeholder="События, дата или участнки" >
+     </form>
+    </div>
+  </div>
+</nav>
+
+<div class="row box">
+  <div class="col-2 strelka p"><img  class="img_icon"src="https://img.icons8.com/metro/80/666666/left.png"></div><div class="col-4 month "></div><div class="col-2 strelka n"><img  class="img_icon" src="https://img.icons8.com/metro/80/666666/right.png"></div>
+</div>
+<table id="calendar">
+  <thead>
+    <tr><td class="t_day">Пн<td class="t_day">Вт<td class="t_day">Ср<td class="t_day">Чт<td class="t_day">Пт<td class="t_day">Сб<td class="t_day">Вс
+  <tbody>
+</table>
+
+
+<div class="form-popup" id="myForm">
+  <form action="" class="form-container">
+    <div class="">
+      <img  onclick="closeForm()"  class="close" src="https://img.icons8.com/small/80/666666/multiply.png">
+    </div>
+    <input class="event" type="text" id="sob" placeholder="Событие" name=""  value="" required>
+    <input class="event" type="text" id="data"placeholder="День, месяц, год" name=""  value="" required>
+    <input class="event" type="text" id="name" placeholder="Имена участников" name="" value=""  required>
+    <textarea class="textarea_text event" id="text_b"name="name"  value="" rows="6" cols="40"></textarea>
+    <button id="save_changes_button" type="button" class="btn" onclick="saveChanges()" style="display: none">Сохранить изменения</button>
+    <button type="button" class="btn" onclick="enter()">Готово</button>
+    <button id="delete_event_button"type="button" class="btn cancel" onclick="deleteEvent()" style="display: none">Удалить</button>
+  </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/calen.js"></script>
+
+
+</body>
+</html>
+   
+
+
